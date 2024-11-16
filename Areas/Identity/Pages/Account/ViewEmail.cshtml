@@ -1,0 +1,18 @@
+﻿@page
+@model ViewEmailModel
+@{
+    ViewData["Title"] = "View Email";
+}
+
+<div class="email-view">
+    <h2>@Model.EmailSubject</h2>
+    <p><strong>From:</strong> @Model.EmailSender</p>
+    <p><strong>Date:</strong> @Model.EmailDate</p>
+
+    <div class="email-message">
+        <p><strong>Message:</strong></p>
+        <pre>@Model.EmailMessage</pre>
+    </div>
+
+    <a class="btn btn-primary btn-sm" href="/Index">Back to Inbox</a>
+</div>
